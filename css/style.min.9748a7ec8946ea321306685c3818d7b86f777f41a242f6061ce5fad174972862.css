@@ -8,14 +8,18 @@
     --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-green-200: oklch(92.5% 0.084 155.995);
     --color-blue-200: oklch(88.2% 0.059 254.128);
+    --color-blue-600: oklch(54.6% 0.245 262.881);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-pink-200: oklch(89.9% 0.061 343.231);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
     --color-gray-700: oklch(37.3% 0.034 259.733);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --container-3xl: 48rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
@@ -583,6 +587,9 @@
   .w-full {
     width: 100%;
   }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
   .max-w-\[600px\] {
     max-width: 600px;
   }
@@ -681,6 +688,9 @@
   }
   .border-border {
     border-color: var(--color-border);
+  }
+  .bg-blue-600 {
+    background-color: var(--color-blue-600);
   }
   .bg-body {
     background-color: var(--color-body);
@@ -832,6 +842,10 @@
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
   .text-lg {
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
@@ -850,8 +864,15 @@
   .text-\[12px\] {
     font-size: 12px;
   }
+  .text-base {
+    font-size: var(--text-base);
+  }
   .text-h3 {
     font-size: var(--text-h3);
+  }
+  .leading-relaxed {
+    --tw-leading: var(--leading-relaxed);
+    line-height: var(--leading-relaxed);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -866,6 +887,9 @@
   }
   .text-gray-500 {
     color: var(--color-gray-500);
+  }
+  .text-gray-600 {
+    color: var(--color-gray-600);
   }
   .text-gray-700 {
     color: var(--color-gray-700);
@@ -915,6 +939,13 @@
   }
   .gx-5 {
     --bs-gutter-x: 3rem;
+  }
+  .hover\:bg-blue-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-blue-700);
+      }
+    }
   }
   .hover\:bg-light {
     &:hover {
@@ -2774,6 +2805,8 @@
 }@property --tw-gradient-to-position{syntax: "<length-percentage>";
   inherits: false;
   initial-value: 100%;
+}@property --tw-leading{syntax: "*";
+  inherits: false;
 }@property --tw-shadow{syntax: "*";
   inherits: false;
   initial-value: 0 0 #0000;
@@ -2838,8 +2871,6 @@
   initial-value: 100%;
 }@property --tw-drop-shadow-size{syntax: "*";
   inherits: false;
-}@property --tw-leading{syntax: "*";
-  inherits: false;
 }@property --tw-content{syntax: "*";
   initial-value: "";
   inherits: false;
@@ -2868,6 +2899,7 @@
       --tw-gradient-from-position: 0%;
       --tw-gradient-via-position: 50%;
       --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -2895,7 +2927,6 @@
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
-      --tw-leading: initial;
       --tw-content: "";
       --tw-duration: initial;
     }
