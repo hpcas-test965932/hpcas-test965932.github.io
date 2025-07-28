@@ -8,8 +8,6 @@
     --color-yellow-200: oklch(94.5% 0.129 101.54);
     --color-green-200: oklch(92.5% 0.084 155.995);
     --color-blue-200: oklch(88.2% 0.059 254.128);
-    --color-blue-600: oklch(54.6% 0.245 262.881);
-    --color-blue-700: oklch(48.8% 0.243 264.376);
     --color-pink-200: oklch(89.9% 0.061 343.231);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-400: oklch(70.7% 0.022 261.325);
@@ -689,9 +687,6 @@
   .border-border {
     border-color: var(--color-border);
   }
-  .bg-blue-600 {
-    background-color: var(--color-blue-600);
-  }
   .bg-body {
     background-color: var(--color-body);
   }
@@ -939,13 +934,6 @@
   }
   .gx-5 {
     --bs-gutter-x: 3rem;
-  }
-  .hover\:bg-blue-700 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-blue-700);
-      }
-    }
   }
   .hover\:bg-light {
     &:hover {
